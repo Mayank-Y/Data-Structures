@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+class node{
+    public:
+    int data;
+    node* next;
+};
+
+node* head;
+
+/* module to insert a new node/*
+void insert_element(int e)
+{ node* new_node = new node();
+  new_node->data=e;
+  new_node->next=NULL;
+  new_node->next=head;
+  head=new_node;
+}
+
+/*module to print all the elements/*
+ void print()
+ {   node* t=head;
+     cout<<"Content of linklist\n";
+  while(t)
+    {cout<<"-->"<<t->data;
+    t=t->next;}
+ }
+ 
+ 
+int main()
+{int ch,element;
+    while(1)
+    {
+        cout<<"\n1. Insert new item. 2.Print. 3.Exit\n";
+        cout<<"enter choice of input: ";
+        cin>>ch;
+        if(ch==1)
+        {
+            cout<<"enter element to list: ";
+            cin>>element;
+            insert_element(element);
+        }
+        else if(ch==2)
+          print();
+            
+        else if(ch=3)
+        break;
+    }
+
+    return 0;
+}
