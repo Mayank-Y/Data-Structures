@@ -1,0 +1,11 @@
+ String reverseWords(String S)
+    {
+        String[] strArr = S.split("\\."); 
+        StringBuilder strBuild = new StringBuilder();
+        for(int i =strArr.length-1;i>=0;i--)
+        {strBuild.append(strArr[i]);
+        if(i!=0)
+        strBuild.append(".");
+            
+        }return strBuild.toString();
+    }
